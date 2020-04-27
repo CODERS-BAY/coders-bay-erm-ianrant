@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8760\viewkind0
+\deftab560
+\pard\pardeftab560\slleading20\partightenfactor0
+
+\f0\fs28 \cf0 in der coders bay gibt es Trainer, wobei ein Trainer mindestens 1 Fach unterrichten kann, und maximal 4. \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Die Teilnehmer entscheiden sich f\'fcr 1 bis 2 F\'e4cher (Id, Beschreibung, etc) entscheiden.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Es gibt mehrere Leute in der Administration, deren Aufgabe es ist, mit dem Job Center zu kommunizieren. \
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Im Job Center gibt es mehrere Agents, die wiederum N Klienten betreuen und an verschiedene Bildungseinrichtungen vermitteln.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Die Administratoren der Coders Bay sind dann f\'fcr die Bearbeitung dieser Klienten zust\'e4ndig. Um eine Eignung festzustellen, organisieren sie Termine zwischen Klienten und Trainern f\'fcr Eignungsgespr\'e4che. Diese Gespr\'e4che entscheiden dar\'fcber, ob ein Klient zum Teilnehmer werden darf.\
+\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab560\slleading20\partightenfactor0
+\cf0 Alle erlaubten Teilnehmer bekommen eine gewisse Ausr\'fcstung zum Kursbeginn zur Verf\'fcgung gestellt. Grundausstattung ist immer ein Laptop, eine Maus, eine Tastatur und ein Monitor. \
+Abh\'e4ngig vom Kurs werden dann unterschiedliche B\'fccher und Online-Ressourcen zur Verf\'fcgung gestellt, damit die jeweiligen F\'e4cher unterrichtet und gelernt werden k\'f6nnen.
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 trainer( (PK) trainer_ID:int(15), trainer_name:varchar(50) )\
+\
+\
+teaches( (PK) trainer_ID:int(15), subject_ID:int(15) )\
+\
+\
+subject( (PK) subject_ID:int(15), subject_name:varchar(50) )\
+\
+\
+attends( (PK) participant_ID:int(15), subject_ID:int(15) )\
+\
+\
+participant( (PK) participant_ID:int(15), participant_name:varchar(50) )\
+\
+\
+equipment( (PK) set_ID:int(15), set_content:varchar(50) )\
+\
+\
+receives( (PK) participant_ID:int(15), book_ID:int(15) )\
+\
+\
+studyresources( (PK) book_ID:int(15), book_title:varchar(50) )\
+\
+\
+evaluates( (PK) trainer_ID:int(15), client:int(15), is_accepted(bool) )\
+\
+\
+administrator( (PK) admin_ID:int(15), admin_name:varchar(50) )\
+\
+\
+communicateswith( (PK) admin_ID:int(15), job_center_agend_ID:int(15) )\
+\
+\
+jobcenteragent( (PK) job_center_agent_ID:int(15), job_center_agent_name:varchar(50) )\
+\
+\
+jobcenterclient( (PK) client_ID:int(15), client_name:varchar(50) )\
+\
+\
+\
+\
+\
+\
+}
